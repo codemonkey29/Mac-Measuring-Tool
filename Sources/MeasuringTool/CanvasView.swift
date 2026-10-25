@@ -105,7 +105,10 @@ final class CanvasView: NSView {
             displayedImage = workspace.image
             imageView.image = displayedImage
             cancelPicking()
+            // Fit now, or on the first resize if the view hasn't been laid out yet.
+            fitsWindow = true
             zoomToFit()
+            layoutImage()
             window?.makeFirstResponder(self)
         }
         if workspace.tool != displayedTool {

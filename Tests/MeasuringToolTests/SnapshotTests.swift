@@ -23,6 +23,7 @@ final class SnapshotTests: XCTestCase {
             backing: .buffered,
             defer: false
         )
+        window.isReleasedWhenClosed = false
         window.appearance = NSAppearance(named: .aqua)
         window.contentView = hostingView
         window.orderFrontRegardless()
@@ -52,6 +53,7 @@ final class SnapshotTests: XCTestCase {
         sheetWorkspace.pendingReference = Segment(start: .zero, end: CGPoint(x: 1000, y: 0))
         let sheetView = NSHostingView(rootView: ScaleSheet(workspace: sheetWorkspace))
         let sheetWindow = NSWindow(contentRect: CGRect(x: 0, y: 0, width: 360, height: 160), styleMask: [.titled], backing: .buffered, defer: false)
+        sheetWindow.isReleasedWhenClosed = false
         sheetWindow.appearance = NSAppearance(named: .aqua)
         sheetWindow.contentView = sheetView
         sheetWindow.setContentSize(sheetView.fittingSize)
