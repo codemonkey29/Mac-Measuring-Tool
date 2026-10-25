@@ -3,7 +3,7 @@
 A tiny native macOS app for quick measurements from photos. Import an image, set the scale by
 drawing a line over something of known length, then measure anything else in the same plane.
 
-- About 2 MB, no dependencies, works offline
+- About 1 MB, no dependencies, works offline
 - Opens JPEG, PNG, HEIC/HEIF, TIFF, GIF, BMP, WebP and most camera RAW files, and respects the
   photo's orientation
 - Requires macOS 14 (Sonoma) or later
