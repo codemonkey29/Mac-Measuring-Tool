@@ -14,9 +14,9 @@ struct RibbonView: View {
                 .frame(height: 40)
                 .padding(.horizontal, 6)
             Group {
-                toolButton(.scale, title: "Scale", systemImage: "lines.measurement.horizontal",
+                toolButton(.scale, title: "Scale", systemImage: "ruler",
                            help: "Set the scale from a known distance (S)")
-                toolButton(.measure, title: "Measure", systemImage: "ruler",
+                toolButton(.measure, title: "Measure", systemImage: "lines.measurement.horizontal",
                            help: "Measure between two points (M)")
                 toolButton(.pan, title: "Zoom / Pan", systemImage: "hand.raised",
                            help: "Drag to pan, scroll or pinch to zoom (P)")

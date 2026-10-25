@@ -32,12 +32,3 @@ jobs:
           path: snapshots
           if-no-files-found: ignore
 
-      # Temporary: print the snapshots into the log so they can be inspected.
-      - name: Print snapshots
-        if: always()
-        run: |
-          for f in snapshots/*.png; do
-            echo "=====BEGIN $(basename "$f")"
-            base64 -b 8000 -i "$f"
-            echo "=====END"
-          done

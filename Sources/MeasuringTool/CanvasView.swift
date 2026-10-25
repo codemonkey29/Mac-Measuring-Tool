@@ -505,11 +505,11 @@ final class CanvasView: NSView {
         // A dark halo keeps lines visible on both light and dark images.
         context.addPath(path)
         context.setStrokeColor(NSColor.black.withAlphaComponent(0.55).cgColor)
-        context.setLineWidth(4)
+        context.setLineWidth(4.5)
         context.strokePath()
         context.addPath(path)
         context.setStrokeColor(color.cgColor)
-        context.setLineWidth(1.5)
+        context.setLineWidth(2)
         if dashed { context.setLineDash(phase: 0, lengths: [6, 4]) }
         context.strokePath()
         context.restoreGState()
